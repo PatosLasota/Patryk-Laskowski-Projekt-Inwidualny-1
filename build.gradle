@@ -1,4 +1,5 @@
 plugins {
+    id 'java'
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.1.0'
 }
@@ -26,4 +27,14 @@ javafx {
 }
 application {
     mainClassName = 'com.kodilla.Main'
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']         // katalog z Javą
+        }
+        resources {
+            srcDirs = ['src/main/resources']   // katalog z zasobami
+        }
+    }
 }
