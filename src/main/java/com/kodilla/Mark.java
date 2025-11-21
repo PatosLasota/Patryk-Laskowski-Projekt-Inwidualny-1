@@ -1,10 +1,11 @@
 package com.kodilla;
 
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-public class Mark {
+public class Mark extends Node {
     private boolean isCircleTurn = true;
     private Image circle;
     private  Image cross;
@@ -30,5 +31,10 @@ public class Mark {
     }
     public void resetTurn(){
         isCircleTurn = true;
+    }
+
+    @Override
+    public Node getStyleableNode() {
+        return super.getStyleableNode();
     }
 }
