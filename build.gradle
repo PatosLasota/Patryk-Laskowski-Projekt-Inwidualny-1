@@ -15,6 +15,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.openjfx:javafx-media:21.0.9'
 }
 
 test {
@@ -23,7 +24,10 @@ test {
 
 javafx {
     version = "21.0.9"
-    modules = [ 'javafx.controls' ]
+    modules = [ 'javafx.controls',
+                'javafx.media',
+                'javafx.base'
+    ]
 }
 application {
     mainClassName = 'com.kodilla.Main'
