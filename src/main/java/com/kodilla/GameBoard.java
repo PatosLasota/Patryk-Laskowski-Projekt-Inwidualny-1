@@ -24,7 +24,7 @@ public class GameBoard extends GridPane {
     private void setupBoard(Image backgroundImage) {
         setHgap(22);
         setVgap(23);
-        setPadding(new Insets(231, 0, 0, 70));
+        setPadding(new Insets(181, 0, 0, 70));
 
         BackgroundSize backgroundSize = new BackgroundSize(100, 100, true, true, true, false);
         BackgroundImage backgroundImg = new BackgroundImage(backgroundImage,
@@ -47,8 +47,8 @@ public class GameBoard extends GridPane {
         cell.setPrefSize(100, 100);
         cell.setOnMouseClicked(event -> handleCellClick(row, col));
 //        cell.setStyle("-fx-border-color: white; " +
-//            "-fx-border-width: 2px; " +
-//            "-fx-background-color: rgba(255, 255, 255, 0.1);");
+//                "-fx-border-width: 2px; " +
+//                "-fx-background-color: rgba(255, 255, 255, 0.1);");
         return cell;
     }
 
