@@ -40,9 +40,13 @@
 //}
 package com.kodilla;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
+import javafx.animation.ScaleTransition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
 public class Mark {
     private final Image circleImage;
@@ -58,6 +62,26 @@ public class Mark {
         markImage.setFitHeight(90);
         markImage.setFitWidth(90);
         markImage.setPreserveRatio(true);
+
+        FadeTransition ft = new FadeTransition(Duration.millis(100), markImage);
+        ft.setFromValue(0.0);
+        ft.setToValue(1.0);
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(150), markImage);
+        scaleTransition.setFromX(0.4);
+        scaleTransition.setFromY(0.4);
+        scaleTransition.setToX(1.2);
+        scaleTransition.setToY(1.2);
+        scaleTransition.setCycleCount(2);
+        scaleTransition.setAutoReverse(true);
+        scaleTransition.setInterpolator(Interpolator.EASE_BOTH);
+
+        ScaleTransition finalScale = new ScaleTransition(Duration.millis(200), markImage);
+        finalScale.setToX(1.0);
+        finalScale.setToY(1.0);
+
+        scaleTransition.play();
+
+        scaleTransition.setOnFinished(event -> finalScale.play());
         grid.add(markImage, col, row);
     }
 }
