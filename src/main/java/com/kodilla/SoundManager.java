@@ -6,9 +6,9 @@ import java.awt.*;
 
 public class SoundManager {
 
-    private static final String CLICK_SOUND = "file:src/main/resources/click.mp3";
-    private static final String WIN_SOUND = "file:src/main/resources/win.mp3";
-    private static final String DRAW_SOUND = "file:src/main/resources/draw.mp3";
+    private static final String CLICK_SOUND = "file:/Users/patrwlas/dev/Patryk-Laskowski-Projekt-Inwidualny-1/src/main/resources/click.mp3";
+    private static final String WIN_SOUND = "file:/Users/patrwlas/dev/Patryk-Laskowski-Projekt-Inwidualny-1/src/main/resources/win.mp3";
+    private static final String DRAW_SOUND = "file:/Users/patrwlas/dev/Patryk-Laskowski-Projekt-Inwidualny-1/src/main/resources/draw.mp3";
 
     public static void playClickSound() {
         try {

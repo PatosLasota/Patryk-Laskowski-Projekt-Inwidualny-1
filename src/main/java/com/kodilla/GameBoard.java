@@ -54,6 +54,7 @@ public class GameBoard extends GridPane {
 
     private void handleCellClick(int row, int col) {
         if (game.makeMove(row, col)) {
+            SoundManager.playClickSound();
             addMark(row, col);
             checkGameState();
         }
