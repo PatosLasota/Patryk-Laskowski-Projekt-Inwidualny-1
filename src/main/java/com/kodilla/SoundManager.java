@@ -36,6 +36,7 @@ public class SoundManager {
             System.out.println("Nie można odtworzyć dźwięku remisu");
         }
     }
+
     public static void playBeep() {
         try {
             Toolkit.getDefaultToolkit().beep();
